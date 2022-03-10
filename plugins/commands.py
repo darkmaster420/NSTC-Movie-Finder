@@ -216,4 +216,4 @@ async def bot_info(bot, message):
             InlineKeyboardButton('Movie Updates', url='https://t.me/LightSpeedUploads')
         ]
     ]
-    await message.reply(text="<b>you can view files <a href="https://lbot.a7a8524.workers.dev">Here</a></b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+    await message.reply(text="My Dad @a7a8524", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)

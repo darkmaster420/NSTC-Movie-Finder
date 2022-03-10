@@ -25,12 +25,12 @@ AUTH_GROUPS = [int(admin) for admin in environ.get("AUTH_GROUPS", "").split()]
 # MongoDB information
 DATABASE_URI = environ['DATABASE_URI']
 DATABASE_NAME = environ['DATABASE_NAME']
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_series')
 
 # Messages
 default_start_msg = """
-**Hi, I'm Movie Search Bot**
-Here you can search movies in Inline mode as well as PM, Use the below buttons to search movies or send me the name of movie to search.
+Hello, I'm a Movie Search Bot
+Here you can search movies in Inline mode as well as PM, Use the buttons to search movies or send me the name of movie to search.
 """
 START_MSG = environ.get('START_MSG', default_start_msg)
 

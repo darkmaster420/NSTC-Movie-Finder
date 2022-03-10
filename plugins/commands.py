@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 @Client.on_message(filters.command("start") & filters.private)
 async def start(bot, cmd):
     usr_cmdall1 = cmd.text
-    if usr_cmdall1.startswith("/start tgmoviedbbot"):
+    if usr_cmdall1.startswith("/start LightSpeedSeriesbot"):
         if AUTH_CHANNEL:
             invite_link = await bot.create_chat_invite_link(int(AUTH_CHANNEL))
             try:
@@ -18,7 +18,7 @@ async def start(bot, cmd):
                 if user.status == "kicked":
                     await bot.send_message(
                         chat_id=cmd.from_user.id,
-                        text="Sorry Sir, You are Banned to use me.",
+                        text="Sorry, You are not allowed to use me.",
                         parse_mode="markdown",
                         disable_web_page_preview=True
                     )
@@ -27,11 +27,11 @@ async def start(bot, cmd):
                 ident, file_id = cmd.text.split("_-_-_-_")
                 await bot.send_message(
                     chat_id=cmd.from_user.id,
-                    text="**Please Join My Updates Channel to use this Bot!**",
+                    text="You must join my channel to use this Bot",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("🤖 Join Updates Channel", url=invite_link.invite_link)
+                                InlineKeyboardButton("🤖 Join Channel", url=invite_link.invite_link)
                             ],
                             [
                                 InlineKeyboardButton(" 🔄 Try Again", callback_data=f"checksub#{file_id}")
@@ -67,7 +67,7 @@ async def start(bot, cmd):
                 buttons = [
                     [
                         InlineKeyboardButton('Search again', switch_inline_query_current_chat=''),
-                        InlineKeyboardButton('More Bots', url='https://t.me/SLBotsofficial/28')
+                        InlineKeyboardButton('More Bots', url='https://t.me/+90yFX51a1d43NWUx')
                     ]
                 ]
                 await bot.send_cached_media(
@@ -82,11 +82,11 @@ async def start(bot, cmd):
         invite_link = await bot.create_chat_invite_link(int(AUTH_CHANNEL))
         await bot.send_message(
             chat_id=cmd.from_user.id,
-            text="**Please Join My Updates Channel to use this Bot!**",
+            text="First you have to join my channel to use this Bot",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🤖 Join Updates Channel", url=invite_link.invite_link)
+                        InlineKeyboardButton("🤖 Join Channel", url=invite_link.invite_link)
                     ]
                 ]
             )
@@ -104,10 +104,10 @@ async def start(bot, cmd):
                     ],
                     [
                         InlineKeyboardButton("About", callback_data="about"),
-                        InlineKeyboardButton("Other Bots", url="https://t.me/SLBotsofficial/28")
+                        InlineKeyboardButton("Other Bots", url="https://t.me/+90yFX51a1d43NWUx")
                     ],
                     [
-                        InlineKeyboardButton("➕ Add Me to your group ➕",url="t.me/tgmoviedbbot?startgroup=true")
+                        InlineKeyboardButton("➕ Add Me to your group ➕",url="t.me/LightSpeedSeriesbot?startgroup=true")
                     ]
                 ]
             )
@@ -123,7 +123,7 @@ async def start(bot, cmd):
                 [
                     [
                         InlineKeyboardButton("Search Here", switch_inline_query_current_chat=''),
-                        InlineKeyboardButton("Switch to PM", url="t.me/tgmoviedbbot?start=true")
+                        InlineKeyboardButton("Switch to PM", url="t.me/LightSpeedSeriesbot?start=true")
                     ]
                 ]
             )
@@ -212,8 +212,8 @@ async def delete(bot, message):
 async def bot_info(bot, message):
     buttons = [
         [
-            InlineKeyboardButton('Bot Update Channel', url='https://t.me/SLBotsOfficial'),
-            InlineKeyboardButton('Movie Updates', url='https://t.me/nstcentertainmentgroup')
+            InlineKeyboardButton('Bot Update Channel', url='https://t.me/+90yFX51a1d43NWUx'),
+            InlineKeyboardButton('Movie Updates', url='https://t.me/LightSpeedUploads')
         ]
     ]
-    await message.reply(text="<b>This is a clone of [TGMOVIEDB](https://t.me/tgmoviedbbot)\nDeveloper : <a href='https://t.me/TharukRenuja'>Tharuk Renuja</a>\nLanguage : <code>Python3</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\nBot Update : <a href='https://t.me/SLBotsofficial'>SLBotsOfficial</a>\nMovie Updates : <a href='https://t.me/nstcentertainment'>NSTC Entertainment</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+    await message.reply(text="<b>you can view files <a href="https://lbot.a7a8524.workers.dev">Here</a></b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
